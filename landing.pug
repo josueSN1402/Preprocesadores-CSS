@@ -1,4 +1,4 @@
--var tituto = "Título Principal"
+-var usuario = "Ana Paula"
 -var titulos = ["Título Principal", "Subtitulo 1", "Subtitulo 2", "Subtitulo 3"]
 
 doctype html
@@ -8,12 +8,15 @@ html
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title PlatziGames
-		//- link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/css-reset-and-normalize/css/reset-and-normalize.min.css")
+		// link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/css-reset-and-normalize/css/reset-and-normalize.min.css")
 		link(rel="stylesheet", href='css/ejercicio-pug.css')
 	body
 		header
 			h1 PlatziGames
-			a.boton Registro
+			if usuario
+					a Hola #{usuario}
+			else
+				a.boton Registro
 		section.intro
 			.intro__imagen: img(src="images/imagen.png")
 			.intro__contenido
@@ -31,3 +34,6 @@ html
 						| rutrum. Integer rhoncus finibus 
 						| nunc, ac porttitor ex dapibus ac
 				a.boton Leer más
+		ul
+			each titulo in titulos
+				li #{titulo}
