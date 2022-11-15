@@ -132,7 +132,11 @@ footer ul {
 }
 
 footer li {
+	font-family: Oswald;
+	font-weight: 300;
+	font-size: 15px;
 	margin: 0 20px;
+	letter-spacing: 0.1rem;
 }
 
 .intro__aside {
